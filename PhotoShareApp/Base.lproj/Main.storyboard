@@ -70,7 +70,7 @@
         <!--Item 2-->
         <scene sceneID="lfs-hQ-PAr">
             <objects>
-                <viewController id="lmU-fg-sjE" sceneMemberID="viewController">
+                <viewController id="lmU-fg-sjE" customClass="UploadViewController" customModule="PhotoShareApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BiJ-Oz-p7c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,10 +83,43 @@
             </objects>
             <point key="canvasLocation" x="1139" y="80"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="T9Z-kP-i4k">
+            <objects>
+                <viewController id="RQM-H5-pN5" customClass="SettingsViewController" customModule="PhotoShareApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4L9-0V-Urm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSv-1c-LHW">
+                                <rect key="frame" x="170.66666666666666" y="409" width="52" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Exit"/>
+                                <connections>
+                                    <action selector="exitButton:" destination="RQM-H5-pN5" eventType="touchUpInside" id="NYw-kz-qcd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2wu-3K-UCi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bSv-1c-LHW" firstAttribute="centerX" secondItem="4L9-0V-Urm" secondAttribute="centerX" id="88a-2A-tef"/>
+                            <constraint firstItem="bSv-1c-LHW" firstAttribute="centerY" secondItem="4L9-0V-Urm" secondAttribute="centerY" id="SmG-on-9i4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="nO2-Hw-82n"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="nOv-cZ-cyn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhb-E0-ay6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.6412213740457" y="737.32394366197184"/>
+        </scene>
         <!--Item 1-->
         <scene sceneID="waQ-l5-8TG">
             <objects>
-                <viewController id="5MU-Vy-MX2" sceneMemberID="viewController">
+                <viewController id="5MU-Vy-MX2" customClass="FeedViewController" customModule="PhotoShareApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Tr-cG-0Ec">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +145,7 @@
                     <connections>
                         <segue destination="5MU-Vy-MX2" kind="relationship" relationship="viewControllers" id="BcD-hX-1Nr"/>
                         <segue destination="lmU-fg-sjE" kind="relationship" relationship="viewControllers" id="h97-HG-9BU"/>
+                        <segue destination="RQM-H5-pN5" kind="relationship" relationship="viewControllers" id="Oyi-57-kyT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYl-ts-Ewk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

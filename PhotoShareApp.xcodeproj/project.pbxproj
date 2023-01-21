@@ -14,6 +14,9 @@
 		6E949E4E296CA23D00B99A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E949E4D296CA23D00B99A4C /* Assets.xcassets */; };
 		6E949E51296CA23D00B99A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E949E4F296CA23D00B99A4C /* LaunchScreen.storyboard */; };
 		6E949E59296CA44D00B99A4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E949E58296CA44D00B99A4C /* GoogleService-Info.plist */; };
+		6EBE25D3297C265B000D7659 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE25D2297C265B000D7659 /* FeedViewController.swift */; };
+		6EBE25D5297C2666000D7659 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE25D4297C2666000D7659 /* UploadViewController.swift */; };
+		6EBE25D7297C2677000D7659 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE25D6297C2677000D7659 /* SettingsViewController.swift */; };
 		BCAF51D62654F51E68525143 /* Pods_PhotoShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216FED402E8D23CF83CFC1E6 /* Pods_PhotoShareApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		6E949E50296CA23D00B99A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E949E52296CA23D00B99A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E949E58296CA44D00B99A4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EBE25D2297C265B000D7659 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		6EBE25D4297C2666000D7659 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		6EBE25D6297C2677000D7659 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7702C6349568EF0BF7E6BE41 /* Pods-PhotoShareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShareApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoShareApp/Pods-PhotoShareApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E9AC60956A364813F657AABC /* Pods-PhotoShareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShareApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoShareApp/Pods-PhotoShareApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +56,6 @@
 				7702C6349568EF0BF7E6BE41 /* Pods-PhotoShareApp.debug.xcconfig */,
 				E9AC60956A364813F657AABC /* Pods-PhotoShareApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +83,9 @@
 				6E949E44296CA23C00B99A4C /* AppDelegate.swift */,
 				6E949E46296CA23C00B99A4C /* SceneDelegate.swift */,
 				6E949E48296CA23C00B99A4C /* ViewController.swift */,
+				6EBE25D2297C265B000D7659 /* FeedViewController.swift */,
+				6EBE25D4297C2666000D7659 /* UploadViewController.swift */,
+				6EBE25D6297C2677000D7659 /* SettingsViewController.swift */,
 				6E949E4A296CA23C00B99A4C /* Main.storyboard */,
 				6E949E4D296CA23D00B99A4C /* Assets.xcassets */,
 				6E949E4F296CA23D00B99A4C /* LaunchScreen.storyboard */,
@@ -212,8 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E949E49296CA23C00B99A4C /* ViewController.swift in Sources */,
+				6EBE25D5297C2666000D7659 /* UploadViewController.swift in Sources */,
 				6E949E45296CA23C00B99A4C /* AppDelegate.swift in Sources */,
+				6EBE25D3297C265B000D7659 /* FeedViewController.swift in Sources */,
 				6E949E47296CA23C00B99A4C /* SceneDelegate.swift in Sources */,
+				6EBE25D7297C2677000D7659 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

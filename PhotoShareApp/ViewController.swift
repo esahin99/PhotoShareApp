@@ -10,6 +10,7 @@ class ViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
     }
     @IBAction func registerButton(_ sender: Any) {
+        performSegue(withIdentifier: "toFeedVC", sender: nil)
     }
     
     
