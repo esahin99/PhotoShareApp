@@ -1,5 +1,6 @@
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -10,7 +11,20 @@ class ViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
     }
     @IBAction func registerButton(_ sender: Any) {
-        performSegue(withIdentifier: "toFeedVC", sender: nil)
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            //Kayıt olma işlemi
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authDataResult, error in
+                if error != nil{
+                    self.errorMessage(titleInput: "Error!", messageInput: error!.localizedDescription)
+                }
+                else{
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
+        }
+        else{
+            errorMessage(titleInput: "Error!", messageInput: "Please Enter Name and Password!")
+        }
     }
     
     
@@ -18,7 +32,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    func errorMessage(titleInput: String, messageInput: String){
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
 
