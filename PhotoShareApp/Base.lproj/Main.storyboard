@@ -185,8 +185,24 @@
                     <view key="view" contentMode="scaleToFill" id="5Tr-cG-0Ec">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RFi-i6-rG2">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="w7I-8Z-Rzo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w7I-8Z-Rzo" firstAttribute="bottom" secondItem="RFi-i6-rG2" secondAttribute="bottom" id="GbG-T4-ejb"/>
+                            <constraint firstItem="RFi-i6-rG2" firstAttribute="leading" secondItem="w7I-8Z-Rzo" secondAttribute="leading" id="NM9-oK-oZi"/>
+                            <constraint firstItem="w7I-8Z-Rzo" firstAttribute="trailing" secondItem="RFi-i6-rG2" secondAttribute="trailing" id="Q4A-Fc-Odo"/>
+                            <constraint firstItem="RFi-i6-rG2" firstAttribute="leading" secondItem="w7I-8Z-Rzo" secondAttribute="leading" id="Y8J-lN-tBh"/>
+                            <constraint firstItem="w7I-8Z-Rzo" firstAttribute="bottom" secondItem="RFi-i6-rG2" secondAttribute="bottom" id="dxi-Cg-WlY"/>
+                            <constraint firstItem="RFi-i6-rG2" firstAttribute="top" secondItem="w7I-8Z-Rzo" secondAttribute="top" id="hwx-84-MI3"/>
+                            <constraint firstItem="RFi-i6-rG2" firstAttribute="top" secondItem="w7I-8Z-Rzo" secondAttribute="top" id="u3r-iw-FnE"/>
+                            <constraint firstItem="w7I-8Z-Rzo" firstAttribute="trailing" secondItem="RFi-i6-rG2" secondAttribute="trailing" id="uEe-Uc-LGa"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" id="v9Z-NU-PqA">
                         <imageReference key="image" image="graduationcap.fill" catalog="system" symbolScale="default"/>

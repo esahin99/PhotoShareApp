@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseStorage
+import FirebaseFirestore
+import FirebaseAuth
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -21,14 +23,29 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let data = imageView.image?.jpegData(compressionQuality: 0.5){
             let uuid = UUID().uuidString
             let imageReference = mediaFolder.child("\(uuid).jpg")
-            imageReference.putData(data) { (storagemetadata, error) in
+            imageReference.putData(data, metadata: nil) { (storagemetadata, error) in
                 if error != nil{
-                    self.showErrorMessage(titleInput: "Error", messageInput: error!.localizedDescription)
+                    self.showErrorMessage(titleInput: "Error!", messageInput: error!.localizedDescription)
                 }
                 else{
                     imageReference.downloadURL { url, error in
                         if error == nil{
                             let imageUrl = url?.absoluteString
+                            if let imageUrl = imageUrl{
+                                let firestoreDatabase = Firestore.firestore()
+                                let firestorePost = ["imageurl": imageUrl, "comment": self.commentTextField.text!, "email": Auth.auth().currentUser!.email, "date": FieldValue.serverTimestamp()] as [String: Any]
+                                firestoreDatabase.collection("Post").addDocument(data: firestorePost){(error) in
+                                    if error != nil{
+                                        self.showErrorMessage(titleInput: "Error!", messageInput: error!.localizedDescription)
+                                    }
+                                    else{
+                                        self.commentTextField.text = ""
+                                        self.imageView.image = UIImage(named: "Choose a Photo")
+                                        self.tabBarController?.selectedIndex = 0
+                                    }
+                                }
+                            }
+
                         }
                     }
                 }
