@@ -8,14 +8,6 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var commentTextField: UITextField!
-    
-    
-    @IBAction func uploadButton(_ sender: Any) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

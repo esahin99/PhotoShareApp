@@ -92,12 +92,52 @@
                     <view key="view" contentMode="scaleToFill" id="BiJ-Oz-p7c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose a Photo" translatesAutoresizingMaskIntoConstraints="NO" id="hpe-G3-ckX">
+                                <rect key="frame" x="46" y="137" width="301" height="203"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMX-cr-dQr">
+                                <rect key="frame" x="55" y="389" width="282" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GNp-0x-ZFg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH6-9T-DRs">
+                                <rect key="frame" x="111" y="450" width="170" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="fGO-Ra-l4Q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButton:" destination="lmU-fg-sjE" eventType="touchUpInside" id="Dhi-6U-32u"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zsZ-hK-Hvd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hpe-G3-ckX" firstAttribute="centerX" secondItem="CMX-cr-dQr" secondAttribute="centerX" id="1gb-B8-mIc"/>
+                            <constraint firstItem="WH6-9T-DRs" firstAttribute="leading" secondItem="zsZ-hK-Hvd" secondAttribute="leading" constant="111" id="2WH-CX-MiR"/>
+                            <constraint firstItem="zsZ-hK-Hvd" firstAttribute="bottom" secondItem="WH6-9T-DRs" secondAttribute="bottom" constant="253" id="3tN-5b-bSh"/>
+                            <constraint firstItem="WH6-9T-DRs" firstAttribute="top" secondItem="CMX-cr-dQr" secondAttribute="bottom" constant="27" id="3tl-OL-5uw"/>
+                            <constraint firstItem="CMX-cr-dQr" firstAttribute="top" secondItem="hpe-G3-ckX" secondAttribute="bottom" constant="49" id="Ktu-Rg-aeP"/>
+                            <constraint firstItem="CMX-cr-dQr" firstAttribute="centerX" secondItem="BiJ-Oz-p7c" secondAttribute="centerX" id="LGN-k6-aYo"/>
+                            <constraint firstItem="hpe-G3-ckX" firstAttribute="leading" secondItem="zsZ-hK-Hvd" secondAttribute="leading" constant="46" id="SQ9-OU-Dh3"/>
+                            <constraint firstItem="CMX-cr-dQr" firstAttribute="centerX" secondItem="WH6-9T-DRs" secondAttribute="centerX" id="URU-4N-rxI"/>
+                            <constraint firstItem="hpe-G3-ckX" firstAttribute="top" secondItem="zsZ-hK-Hvd" secondAttribute="top" constant="78" id="a42-ha-lxY"/>
+                            <constraint firstItem="CMX-cr-dQr" firstAttribute="leading" secondItem="zsZ-hK-Hvd" secondAttribute="leading" constant="55" id="epU-I8-ML8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" id="JUK-RJ-RoK">
                         <imageReference key="image" image="square.and.arrow.down.fill" catalog="system" symbolScale="default"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="commentTextField" destination="CMX-cr-dQr" id="x5s-lq-ziA"/>
+                        <outlet property="imageView" destination="hpe-G3-ckX" id="J4G-l9-DsQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1W-LL-owX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,52 +185,12 @@
                     <view key="view" contentMode="scaleToFill" id="5Tr-cG-0Ec">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose a Photo" translatesAutoresizingMaskIntoConstraints="NO" id="hpe-G3-ckX">
-                                <rect key="frame" x="46" y="125" width="301" height="203"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMX-cr-dQr">
-                                <rect key="frame" x="55" y="362" width="282" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="dVD-9s-2Nq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH6-9T-DRs">
-                                <rect key="frame" x="111" y="420" width="170" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="Ym0-s7-prf"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
-                                <connections>
-                                    <action selector="uploadButton:" destination="5MU-Vy-MX2" eventType="touchUpInside" id="PyX-sg-0Gy"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="w7I-8Z-Rzo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="WH6-9T-DRs" firstAttribute="leading" secondItem="w7I-8Z-Rzo" secondAttribute="leading" constant="111" id="4c0-ef-b4W"/>
-                            <constraint firstItem="hpe-G3-ckX" firstAttribute="centerX" secondItem="CMX-cr-dQr" secondAttribute="centerX" id="6l6-AI-Rsf"/>
-                            <constraint firstItem="hpe-G3-ckX" firstAttribute="top" secondItem="w7I-8Z-Rzo" secondAttribute="top" constant="66" id="ASx-br-veO"/>
-                            <constraint firstItem="CMX-cr-dQr" firstAttribute="centerX" secondItem="WH6-9T-DRs" secondAttribute="centerX" id="Cha-n8-kuZ"/>
-                            <constraint firstItem="CMX-cr-dQr" firstAttribute="top" secondItem="hpe-G3-ckX" secondAttribute="bottom" constant="34" id="Fb5-mf-KGc"/>
-                            <constraint firstItem="CMX-cr-dQr" firstAttribute="leading" secondItem="w7I-8Z-Rzo" secondAttribute="leading" constant="55" id="OJD-Nn-if4"/>
-                            <constraint firstItem="w7I-8Z-Rzo" firstAttribute="bottom" secondItem="WH6-9T-DRs" secondAttribute="bottom" constant="283" id="aOj-MP-xaz"/>
-                            <constraint firstItem="WH6-9T-DRs" firstAttribute="top" secondItem="CMX-cr-dQr" secondAttribute="bottom" constant="24" id="n0E-9w-0QB"/>
-                            <constraint firstItem="hpe-G3-ckX" firstAttribute="leading" secondItem="w7I-8Z-Rzo" secondAttribute="leading" constant="46" id="pMH-WN-712"/>
-                            <constraint firstItem="CMX-cr-dQr" firstAttribute="centerX" secondItem="5Tr-cG-0Ec" secondAttribute="centerX" id="vBJ-ZF-5Qm"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" id="v9Z-NU-PqA">
                         <imageReference key="image" image="graduationcap.fill" catalog="system" symbolScale="default"/>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="commentTextField" destination="CMX-cr-dQr" id="mwW-1m-ei7"/>
-                        <outlet property="imageView" destination="hpe-G3-ckX" id="yyH-XM-SAF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4h-MO-2VZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
